@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('IMG/Fundo-Skrrt.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    border: 1px solid gray;
+    box-shadow: 0 0 10px 10px gray;
+    height: 70vh;
+    width: 70vh;
+    background-color: #fff;
+}
+
+div img {
+    width: 430px;
+    height: 400px;
+}
+
+.btn {
+    background-color: #35402D;
+    color: #fff;
+    border: 1px solid #35402D;
+}
+
+.btn:hover {
+    background-color: #35402D;
+    color: #fff;
+    border: 1px solid #35402D;
+}
+
+.input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    width: 250px;
+    border-radius: 0px;
+
+}
+
+.input:focus {
+
+    box-shadow: none;
+    border-bottom: black 1px solid;
+    border-radius: 0px;
+}
+
+.input:invalid {
+    border-bottom: red 1px solid;
+    transition: width 2s;
+}
+
+.H1 {
+
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+a {
+    color: #35402D;
+}
+
+.Link {
+    color: #fff;
+    text-decoration: none;
+}
+.img-logo img{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    margin-left: 100px;
+    padding: auto;
+}

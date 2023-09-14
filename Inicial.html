@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Incluir o favicon -->
+  <link rel="shortcut icon" href="img/Favicon2-removebg-preview.png" type="image/x-icon">
+  <title>SkrrtStreet</title>
+  <!-- Link do Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+    <!-- CSS do bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Ícones do Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- CSS personalizado-->
+  <link rel="stylesheet" href="CSS/Inicial.css">
+</head>
+
+<body>
+  <!-- Inserindo a navbar -->
+  <nav class="navbar h-75 d-flex w-auto mb-4" id="navbar">
+    <div class="container">
+      <!-- marca da loja -->
+      <a class="navbar-brand"  href="#">
+        <img src="img/Logo.png" alt="">
+      </a>
+      <div id="navbar-items">
+        <!-- insere a div para limitar o espaço -->
+        <div></div>
+        <!-- formulario com display flex -->
+        <form class="d-flex" id="search-form">
+          <!-- ícone da lupa -->
+          <i class="bi bi-search primary-color"></i>
+          <input class="form-control me-2" type="search" placeholder="Encontre o seu produto" aria-label="Search">
+          <button class="btn secondary-bg-color" type="submit">Pesquisar</button>
+        </form>
+        <!-- lista nao ordenada -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Login.Html">
+              <!-- ícone -->
+              <i class="bi bi-person"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <!-- ícone -->
+              <i class="bi bi-heart"></i>
+            </a>
+            <!-- quantidade produtos -->
+            <span class="qty-info">5</span>
+          </li>
+          <li class="nav-item" id="cart-item">
+            <a class="nav-link" href="#">
+              <!-- ícone -->
+              <i class="bi bi-cart"></i>
+              <b>R$ 1200,38</b>
+            </a>
+            <span class="qty-info">3</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Segunda navbar -->
+
+  <nav class="navbar navbar-expand-lg secondary-bg-color p-2" id="bottom-navbar-container">
+    <div class="container">
+      <!-- menu hamburguer em mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottom-navbar" aria-controls="bottom-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <ul class="navbar-nav mb-2 mb-lg-0 collapse navbar-collapse" id="bottom-navbar">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#best-sellers">
+            Mais vendidos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bottom-banner">
+            Promoções
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#products">
+            Produtos
+          </a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">
+            Contato
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- FIM NAVBAR -->
+
+  <!-- Banner principal -->
+
+  <div class="container" id="banners-container">
+    <div id="slider" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/Banner1.png" class="d-block w-100 img-fluid" alt="banner-1">
+          <!-- textos dos slides -->
+          <div class="carousel-caption primary-bg-color">
+            <h5> Desbravando o Estilo nas Ruas</h5>
+            <p>A moda sai de moda, o estilo jamais</p>
+          </div>
+        </div>
+        <!-- classe sem o active -->
+        <div class="carousel-item">
+          <img src="img/Banner2.PNG" class="d-block w-100 img-fluid" alt="...">
+          <div class="carousel-caption primary-bg-color">
+            <h5>Luxo é se vestir com conforto e estilo.</h5>
+            <p>Estilo é a minha linguagem e as ruas são a minha passarela.</p>
+          </div>
+        </div>
+      </div>
+      <!-- botões de troca de banner -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- MINI BANNERS -->    
+    <!-- deixar dentro da DIV CAROUSEL -->
+
+    <div class="container" id="mini-banners">
+      <div class="row justify-content-around">
+        <div class="col-12 dark-bg-color" id="mini-banner-1">
+          <h2>Coleção Nova</h2>
+          <img src="img/Logo_1of1-removebg-preview.png" alt="Marca 1">
+          <a href="#">Compre Agora</a>
+        </div>
+        <div class="col-12 secondary-bg-color" id="mini-banner-2">
+          <h2>Promoções</h2>
+          <img src="img/Sufgang.logo-removebg-preview.png" alt="Marca 2">
+          <a href="#">Compre Agora</a>
+        </div>
+        <div class="col-12 dark-bg-color" id="mini-banner-3">
+          <h2>Edição Limitada</h2>
+          <img src="img/371892699_1637644566644923_5928229002674814165_n.png" alt="Marca 3">
+          <a href="#">Compre Agora</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEST SELLERS -->
+
+  <div class="container" id="best-sellers">
+     <!-- Container para os produtos mais vendidos -->
+    <h2 class="title primary-color">Mais vendidos</h2>
+    <!-- Título da seção de produtos mais vendidos -->
+    <div class="row">
+    <!-- Linha que contém as colunas dos produtos -->
+      <div class="col-12 col-md-3">
+      <!-- Coluna para o primeiro produto -->
+        <div class="card primary-bg-color">
+          <img src="img/MaisVendidos1.png" class="card-img-top img-fluid" alt="Produto 1">
+          <!-- Imagem do produto -->
+          <div class="card-body">
+          <!-- Corpo do cartão -->
+          <p class="card-category secondary-color">Camiseta</p>
+          <!-- Categoria do produto -->
+          <h5 class="card-title">Camiseta Suf Gang White</h5>
+          <!-- Nome do produto -->
+          <p class="card-text primary-color">R$99,90</p>
+          <!-- Preço do produto -->
+          <a href="#" class="btn btn-primary">Comprar</a>
+          <!-- Botão de compra -->
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card primary-bg-color">
+          <img src="img/MaisVendidos2.png" class="card-img-top img-fluid" alt="Produto 2">
+          <div class="card-body">
+            <p class="card-category secondary-color">Calça</p>
+            <h5 class="card-title">Calça Sufgang Cristal Ball Off-White</h5>
+            <p class="card-text primary-color">R$157.63</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card primary-bg-color">
+          <img src="img/MaisVendidos3.png" class="card-img-top img-fluid" alt="Produto 3">
+          <div class="card-body">
+            <p class="card-category secondary-color">Camisa</p>
+            <h5 class="card-title">Camisa Sufgang Flor AguaWhite</h5>
+            <p class="card-text primary-color">R$177.63</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card primary-bg-color">
+          <img src="img/MaisVendidos4.png" class="card-img-top img-fluid" alt="Produto 4">
+          <div class="card-body">
+            <p class="card-category secondary-color">Moletom</p>
+            <h5 class="card-title">Moletom Sufgang EditionOfWhit</h5>
+            <p class="card-text primary-color">R$277.63</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER DESTAQUE -->
+
+  <div class="container-fluid banerpromo" id="bottom-banner">
+    <!-- Container de largura total da página -->
+    <div class="row">
+    <!-- Linha que contém duas colunas -->
+        <div class="col-md-12 justify-content-center btn-centro">
+            <!-- Descrição do produto -->
+            <a href="#" class="btn btn-success">Comprar agora</a>
+            <!-- Botão de compra -->
+        </div>
+        <!-- Coluna para a imagem -->
+        <div class="col-12 col-md-4">
+            <!-- Imagem do produto -->
+        </div>
+    </div>
+</div>
+
+  <!-- PRODUTOS -->
+
+  <div class="container" id="products">
+    <!-- Container para a seção de produtos -->
+    <h2 class="title primary-color">Produtos</h2>
+    <!-- Título da seção de produtos -->
+    <div class="row">
+    <!-- Linha que contém duas colunas -->
+        <div class="col-12 col-md-3 d-none d-md-flex back" id="products-banner">
+        <!-- Coluna para o banner de produtos (ATENÇÃO! visível apenas em desktop) -->
+            <p>As Melhores</p>
+            <!-- Texto secundário -->
+            <h3>Marcas</h3>
+            <!-- Título da seção de relógios -->
+            <p>pelos melhores preços</p>
+            <!-- Texto primário -->
+        </div>
+        <!-- Coluna para a seção de produtos individuais -->
+        <div class="col-12 col-md-9">
+            <!-- Coluna para os produtos individuais -->
+                <div class="row">
+                    <!-- Nova linha para os produtos individuais -->
+                    <!-- Repetir estrutura semelhante para cada produto -->
+                    <div class="col-12 col-md-4">
+                    <!-- Coluna para um produto -->
+                        <div class="card primary-bg-color">
+                        <!-- Cartão do produto -->
+                            <img src="img/CAMISETA1-removebg-preview.png" class="card-img-top img-fluid" alt="Moletom" style="width: 150px;">
+                            <!-- Imagem do produto -->
+                            <div class="card-body">
+                            <!-- Corpo do cartão -->
+                                <p class="card-category">Camiseta</p>
+                                <!-- Categoria do produto -->
+                                <h5 class="card-title">004 SUFGANG - PINK</h5>
+                                <!-- Nome do produto -->
+                                <p class="card-text">R$199,90</p>
+                                <!-- Preço do produto -->
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <!-- Botão de compra -->
+                            </div>
+                        </div>
+                    </div>
+              <div class="col-12 col-md-4">
+                <div class="card primary-bg-color">
+                  <img src="img/CAMISETA2-removebg-preview.png" class="card-img-top img-fluid" alt="Relógio" style="width: 150px;">
+                  <div class="card-body">
+                    <p class="card-category">Camiseta</p>
+                    <h5 class="card-title">004 SUFGANG - WHITE</h5>
+                    <p class="card-text">R$250,00</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card primary-bg-color">
+                  <img src="img/CAMISETA3-removebg-preview.png" class="card-img-top img-fluid" alt="Relógio" style="width: 150px;">
+                  <div class="card-body">
+                    <p class="card-category">Moletom</p>
+                    <h5 class="card-title">MOLETOM SUFGANG 004SPY OFF WHITE </h5>
+                    <p class="card-text">R$399,90</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card primary-bg-color">
+                  <img src="img/CAMISETA4-removebg-preview (1).png" class="card-img-top img-fluid" alt="Relógio" style="width: 150px;">
+                  <div class="card-body">
+                    <p class="card-category">Camiseta</p>
+                    <h5 class="card-title">CAMISETA SUFGANG ARABIC JOKER 2.0 OFF WHITE</h5>
+                    <p class="card-text">R$199,90</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card primary-bg-color">
+                  <img src="img/CAMISETA5-removebg-preview.png" class="card-img-top img-fluid" alt="Relógio" style="width: 150px;">
+                  <div class="card-body">
+                    <p class="card-category">Camiseta</p>
+                    <h5 class="card-title">CAMISETA SUFGANG JOKER $ BLACK</h5>
+                    <p class="card-text">R$199.90</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card primary-bg-color">
+                  <img src="img/CAMISETA6-removebg-preview.png" class="card-img-top img-fluid" alt="Relógio" style="width: 150px;">
+                  <div class="card-body">
+                    <p class="card-category">Camiseta</p>
+                    <h5 class="card-title">SUFGANG X PURPLE - WHITE</h5>
+                    <p class="card-text">R$.63</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- GALERIA -->
+
+  <div class="container-fluid" id="gallery">
+  <!-- Container de largura total para a galeria de imagens -->
+    <div class="row">
+    <!-- Linha que contém seis colunas para as imagens -->
+        <div class="col-6 col-md-2 image-container" id="insta1">
+            <!-- Coluna para a imagem 1 -->
+        </div>
+        <div class="col-6 col-md-2 image-container" id="insta2">
+            <!-- Coluna para a imagem 2 -->
+        </div>
+        <div class="col-6 col-md-2 image-container" id="insta3">
+            <!-- Coluna para a imagem 3 -->
+        </div>
+        <div class="col-6 col-md-2 image-container" id="insta4">
+            <!-- Coluna para a imagem 4 -->
+        </div>
+        <div class="col-6 col-md-2 image-container" id="insta5">
+            <!-- Coluna para a imagem 5 -->
+        </div>
+        <div class="col-6 col-md-2 image-container" id="insta6">
+            <!-- Coluna para a imagem 6 -->
+        </div>
+    </div>
+</div>
+
+
+  <!-- FOOTER -->
+  
+  <footer id="footer">
+  <!-- Seção do rodapé -->
+    <div class="container-fluid" id="footer-links-container">
+        <!-- Container para os links do rodapé -->
+        <div class="row">
+        <!-- Linha que contém três colunas de links -->
+            <div class="col-12 col-md-4 footer-column">
+            <!-- Coluna para os links de páginas -->
+                <h3>Páginas</h3>
+                <!-- Título da seção de links -->
+                <ul class="list-unstyled">
+                    <!-- Lista não ordenada de links -->
+                    <li class="mb-2"><a href="#" class="secondary-color">Home</a></li>
+                    <li class="mb-2"><a href="#" class="secondary-color">Categorias</a></li>
+                    <li class="mb-2"><a href="#" class="secondary-color">Promoções</a></li>
+                    <li class="mb-2"><a href="#" class="secondary-color">Contato</a></li>
+                </ul>
+            </div>
+            <!-- Coluna central para informações da loja -->
+            <div class="col-12 col-md-4 footer-column" id="footer-center">
+                <h3>SkrrtStreet</h3>
+                <p class="secondary-color">Alguma dúvida? Ligue para nós</p>
+                <p class="store-phone"><i class="bi bi-telephone"></i> (11)2578-9279</p>
+            </div>
+            <!-- Coluna para os links de informações adicionais -->
+            <div class="col-12 col-md-4 footer-column">
+                <h3>Informações</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="secondary-color">Política de Privacidade</a></li>
+                    <li class="mb-2"><a href="#" class="secondary-color">Política de Entrega</a></li>
+                    <li class="mb-2"><a href="#" class="secondary-color">Rastreie seu pedido</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Seção de inscrição na newsletter e ícones de redes sociais -->
+    <div class="container-fluid" id="newsletter-container">
+        <div class="col-12">
+            <div class="row">
+                <p class="secondary-color">Se inscreva na nossa Promoção:</p>
+                <form class="d-flex" id="news-form">
+                    <i class="bi bi-envelope primary-color"></i>
+                    <input class="form-control me-2" placeholder="Insira seu e-mail">
+                    <button class="btn secondary-bg-color" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-12" id="social-container">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-twitter"></i>
+        </div>
+    </div>
+    <!-- Seção com informações de direitos autorais -->
+    <div class="container" id="copy-container">
+        <p>Todos os direitos reservados @2023 <span class="primary-color">SkrrtStreet</span> - Vestindo As Ruas De SP</p>
+    </div>
+</footer>
+
+</body>
+</html>
